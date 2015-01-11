@@ -1,0 +1,4 @@
+name: Auto Assign Role
+description: Automatically assign a role to new users.
+type: module
+core: 8.x

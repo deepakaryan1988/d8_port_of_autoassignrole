@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the node module.
+ */
+
+/**
+ * Implementation of hook_schema().
+ */
+function autoassignrole_schema() {
+  $schema['autoassignrole_page'] = array(
+    'description' => 'Stores autoassignrole page information',
+    'fields' => array(
+      'rid_page_id' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'The unique identifier for this role page',
+      ),
+      'rids' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'The role IDs for this page',
+      ),
+      'path' => array(
+        'type' => 'text',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'The path for this page',
+      ),
+      'menu' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'The default parent menu for this menu item',
+      ),
+      'title' => array(
+        'type' => 'text',
+        'not null' => TRUE,
+        'description' => 'The description for this page',
+      ),
+      'display' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'The display type for this page',
+      ),
+    ),
+    'primary key' => array('rid_page_id'),
+  );
+
+  return $schema;
+}

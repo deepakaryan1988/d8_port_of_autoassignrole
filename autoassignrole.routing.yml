@@ -1,0 +1,39 @@
+autoassignrole.autoassignrole_assignment:
+  path: 'admin/config/people/autoassignrole'
+  defaults:
+    _controller: '\Drupal\autoassignrole\Controller\autoassignroleController::autoassignrole_admin_block_page'
+  requirements:
+    _permission: 'auto assign role'
+
+autoassignrole.autoassignrole_automatic:
+  path: 'admin/config/people/autoassignrole/auto'
+  defaults:
+    _form: '\Drupal\autoassignrole\Controller\autoassignroleController::autoassignrole_auto_settings'
+  requirements:
+    _permission: 'auto assign role'
+
+autoassignrole.autoassignrole_user:
+  path: 'admin/config/people/autoassignrole/user'
+  defaults:
+    _form: '\Drupal\autoassignrole\Controller\autoassignroleController::autoassignrole_user_settings'
+  requirements:
+    _permission: 'auto assign role'
+
+
+autoassignrole.autoassignrole_pages:
+  path: 'admin/config/people/autoassignrole/pages'
+  defaults:
+    _form: '\Drupal\autoassignrole\Controller\autoassignroleController::autoassignrole_list_pages'
+  requirements:
+    _permission: 'auto assign role'
+
+autoassignrole.autoassignrole_pages_add:
+  path: 'admin/config/people/autoassignrole/pages/add'
+  defaults:
+    _form: '\Drupal\autoassignrole\Controller\autoassignroleController::autoassignrole_list_pages'
+  requirements:
+    _permission: 'auto assign role'
+
+
+
+
